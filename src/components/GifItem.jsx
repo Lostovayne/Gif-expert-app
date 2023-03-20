@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const GifItem = ({ image: { title, url } }) => {
   return (
     <div className='card'>
@@ -5,4 +7,9 @@ export const GifItem = ({ image: { title, url } }) => {
       <p>{title.toUpperCase()}</p>
     </div>
   )
+}
+
+GifItem.PropTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }
